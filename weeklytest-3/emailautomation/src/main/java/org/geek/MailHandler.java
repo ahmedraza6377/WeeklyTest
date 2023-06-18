@@ -1,12 +1,20 @@
 package org.geek;
 
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.RestController;
+
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
+
 public class MailHandler {
-    void sendMail(){
+
+   public void sendMail(String str){
         Properties sysProp = System.getProperties();
 
         System.out.println(sysProp);
@@ -21,8 +29,8 @@ try{
             MimeMessage mailMsg = new MimeMessage(session);
 
             mailMsg.setFrom(Mailmetadata.Usermail);
-            mailMsg.setSubject("this is my first mail using java");
-            mailMsg.setText("hy this java using mail");
+            mailMsg.setSubject("this is my mail using java");
+            mailMsg.setText(str);
 
             Address revermail = new InternetAddress(Mailmetadata.recMail);
             mailMsg.setRecipient(Message.RecipientType.TO, new InternetAddress(Mailmetadata.recMail));
