@@ -1,4 +1,4 @@
-package com.geekster.UserManagement;
+package com.geek.UserManagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

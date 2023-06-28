@@ -1,6 +1,6 @@
-package com.geekster.UserManagement.repository;
+package com.geek.UserManagement.repository;
 
-import com.geekster.UserManagement.model.User;
+import com.geek.UserManagement.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -14,9 +14,5 @@ public class UserRepo {
 
     public List<User> getUsers() {
         return userList;
-    }
-
-    public void delete(User user) {
-        userList.remove(user);
     }
 }
